@@ -43,7 +43,7 @@ const Sessions = () => {
   return (
     <DashboardLayout>
       <div className="space-y-6">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-5">
           <h1 className="text-3xl font-bold">Sessions</h1>
           
           <div className="flex gap-2 w-full sm:w-auto">

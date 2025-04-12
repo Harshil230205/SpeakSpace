@@ -23,7 +23,7 @@ const Discussion = () => {
     return (
       <DashboardLayout>
         <div className="space-y-6">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 pt-6">
             <Link to="/sessions">
               <Button variant="outline" size="sm">
                 <ArrowLeft className="h-4 w-4 mr-2" />
