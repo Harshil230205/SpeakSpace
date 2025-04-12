@@ -13,7 +13,6 @@ SpeakSpace is a real-time collaborative platform designed for students and job s
 4. [Usage](#usage)
 5. [Project Status](#project-status)
 6. [Future Enhancements](#future-enhancements)
-7. [License](#license)
 
 ---
 
@@ -44,16 +43,17 @@ SpeakSpace is a real-time collaborative platform designed for students and job s
 
 ## Installation
 
-1. Clone the repository:  git clone https://github.com/Harshil230205/SpeakSpace.git
+1. Clone the repository --> git clone https://github.com/Harshil230205/SpeakSpace.git
 
-2. Navigate to the project directory: cd speakspace
+2. Navigate to the project directory --> cd speakspace
 
-3. Install dependencies: npm install
+3. Install dependencies --> npm install
 
-4. Set up environment variables:
+4. Set up environment variables: 
 - Create a `.env` file in the root directory.
 - Add variables like `MONGO_URI`, `JWT_SECRET`, and `OPENAI_API_KEY`.
-5. Start the development server: npm start
+  
+5. Start the development server --> npm start
 
 
 
@@ -84,7 +84,7 @@ The project is currently in development. The core functionalities are operationa
 
 ### Author
 
-Developed by team Dominator.  
+Developed by TEAM DOMINATOR.  
 [GitHub Profile](https://github.com/Harshil230205) | [LinkedIn Profile](https://www.linkedin.com/in/harshil-kachhadiya-424795344/)
 
 
