@@ -1,0 +1,424 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 5.9% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 5.9% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 5.9% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  /* Smooth scrolling for the entire site */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .role-badge-moderator {
+    @apply bg-speakspace-moderator text-white text-xs px-2 py-0.5 rounded-full shadow-sm;
+  }
+  
+  .role-badge-participant {
+    @apply bg-speakspace-participant text-white text-xs px-2 py-0.5 rounded-full shadow-sm;
+  }
+  
+  .role-badge-evaluator {
+    @apply bg-speakspace-evaluator text-white text-xs px-2 py-0.5 rounded-full shadow-sm;
+  }
+
+  .btn-primary {
+    @apply bg-speakspace-primary hover:bg-opacity-90 text-white shadow-sm transition-all;
+  }
+
+  .btn-moderator {
+    @apply bg-speakspace-moderator hover:bg-opacity-90 text-white shadow-sm transition-all;
+  }
+
+  .btn-participant {
+    @apply bg-speakspace-participant hover:bg-opacity-90 text-white shadow-sm transition-all;
+  }
+
+  .btn-evaluator {
+    @apply bg-speakspace-evaluator hover:bg-opacity-90 text-white shadow-sm transition-all;
+  }
+  
+  /* Card styles with hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  /* Button hover effect */
+  .btn-hover {
+    @apply transition-transform duration-200 hover:scale-105 active:scale-95;
+  }
+  
+  /* Glass effect for containers */
+  .glass-container {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-md rounded-xl transition-all duration-300 hover:shadow-xl;
+  }
+
+  /* Gradient card effect */
+  .gradient-card {
+    @apply bg-gradient-to-b from-white to-gray-50 shadow-md rounded-xl border border-gray-100 transition-all duration-300 hover:shadow-elevation;
+  }
+  
+  /* Section container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+  }
+  
+  /* New beautiful components */
+  .card-glass {
+    @apply backdrop-blur-lg bg-white/20 border border-white/30 shadow-lg rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .card-colorful {
+    @apply bg-gradient-to-br from-speakspace-primary/10 via-white to-speakspace-evaluator/10 shadow-md rounded-xl border border-white/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-1;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-speakspace-primary to-speakspace-evaluator bg-clip-text text-transparent;
+  }
+  
+  .btn-glass {
+    @apply bg-white/20 backdrop-blur-sm border border-white/30 shadow-sm rounded-lg px-4 py-2 transition-all hover:bg-white/30 hover:shadow-md hover:scale-105;
+  }
+  
+  .input-animated {
+    @apply border-b-2 border-gray-200 focus:border-speakspace-primary transition-all duration-300 outline-none py-2 px-3 bg-transparent;
+  }
+  
+  /* Role-specific cards */
+  .moderator-card {
+    @apply bg-gradient-to-br from-white via-white to-speakspace-moderator/10 border border-speakspace-moderator/20 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .participant-card {
+    @apply bg-gradient-to-br from-white via-white to-speakspace-participant/10 border border-speakspace-participant/20 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .evaluator-card {
+    @apply bg-gradient-to-br from-white via-white to-speakspace-evaluator/10 border border-speakspace-evaluator/20 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  /* Additional animations */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-soft {
+    animation: pulseSoft 2s infinite;
+  }
+
+  .animate-appear {
+    animation: appear 0.5s ease-out forwards;
+  }
+  
+  .animate-pop {
+    animation: pop 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .animate-shimmer {
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 20%, rgba(255,255,255,0) 40%);
+    animation: shimmer 2s infinite linear;
+  }
+  
+  .animate-rotate {
+    animation: rotate 5s linear infinite;
+  }
+  
+  .animate-wave {
+    animation: wave 2s infinite ease-in-out;
+  }
+  
+  .animate-pulse-light {
+    animation: pulseLight 2s infinite;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-down {
+    animation: slideDown 0.5s ease-out forwards;
+  }
+  
+  .animate-fade-in-scale {
+    animation: fadeInScale 0.5s ease-out forwards;
+  }
+  
+  .animate-swing {
+    animation: swing 2s ease-in-out infinite;
+  }
+  
+  .animate-ping-slow {
+    animation: pingSlow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  
+  .animate-breathe {
+    animation: breathe 4s ease-in-out infinite;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    70% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes pulseSoft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes appear {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pop {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-5px);
+    }
+    75% {
+      transform: translateY(5px);
+    }
+  }
+  
+  @keyframes pulseLight {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.85;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes swing {
+    0%, 100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+  
+  @keyframes pingSlow {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    75%, 100% {
+      transform: scale(1.1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes breathe {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
+  }
+}
