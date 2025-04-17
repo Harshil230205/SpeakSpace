@@ -6,6 +6,12 @@ SpeakSpace is a real-time collaborative platform designed for students and job s
 
 ---
 
+## 🔗 Live Demo
+
+Check out the live demo here: [https://speakspace.netlify.app](https://speakspace.netlify.app)
+
+---
+
 ## Table of Contents
 1. [Features](#features)
 2. [Technologies Used](#technologies-used)
